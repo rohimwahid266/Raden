@@ -3,295 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan SRI PUSPITA SARI & ULI SUPIAN</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <title>Undangan Khitan | Luxury Islamic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: #faf7f2;
-      color: #333;
-      line-height: 1.7;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f1a14;
+      color: #f5f5f5;
+      overflow-x: hidden;
     }
-    a { text-decoration: none; color: inherit; }
 
-    /* ===== HEADER ===== */
-    header {
-      min-height: 100vh;
+    /* OPENING */
+    .opening {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+                  url('https://images.unsplash.com/photo-1589384267710-7a6a5d08c04d');
+      background-size: cover;
+      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url('https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      color: white;
-      padding: 20px;
+      z-index: 999;
+      transition: opacity 1s ease, visibility 1s ease;
     }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      margin: 15px 0;
+    .opening.hide {
+      opacity: 0;
+      visibility: hidden;
     }
-    header p { font-size: 1.2rem; }
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 32px;
-      background: #c9a14a;
-      color: white;
-      border-radius: 30px;
-      font-weight: 500;
-    }
-
-    /* ===== SECTION ===== */
-    section {
-      padding: 70px 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-    section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      margin-bottom: 25px;
-      color: #c9a14a;
-    }
-
-    /* ===== AYAT ===== */
-    .ayat {
-      font-style: italic;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    /* ===== COUPLE ===== */
-    .couple {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .card {
-      background: white;
-      padding: 35px 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-    .card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+    .opening h1 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      letter-spacing: 4px;
+      font-size: 40px;
       margin-bottom: 10px;
     }
-
-    /* ===== EVENT ===== */
-    .event {
-      background: white;
-      padding: 40px 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      margin-top: 30px;
+    .opening p {
+      opacity: 0.85;
+      margin-bottom: 30px;
     }
-    .event p { margin: 6px 0; }
-
-    /* ===== COUNTDOWN ===== */
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .time {
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      min-width: 90px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .time span {
-      display: block;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #c9a14a;
-    }
-
-    /* ===== MAP ===== */
-    iframe {
-      width: 100%;
-      height: 320px;
-      border: 0;
-      border-radius: 20px;
-      margin-top: 25px;
-    }
-
-    /* ===== RSVP ===== */
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, textarea, select, button {
-      padding: 12px 15px;
-      border-radius: 12px;
-      border: 1px solid #ddd;
-      font-family: inherit;
-    }
-    button {
-      background: #c9a14a;
-      color: white;
-      border: none;
+    .btn-open {
+      padding: 14px 40px;
+      border-radius: 40px;
+      border: 1px solid #d4af37;
+      background: transparent;
+      color: #d4af37;
+      font-size: 14px;
+      letter-spacing: 2px;
       cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-open:hover {
+      background: #d4af37;
+      color: #0f1a14;
     }
 
-    /* ===== FOOTER ===== */
-    footer {
+    /* CONTENT */
+    .cover {
+      height: 100vh;
+      background: radial-gradient(circle at top, rgba(212,175,55,0.35), transparent 60%),
+                  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+                  url('https://images.unsplash.com/photo-1589384267710-7a6a5d08c04d');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 50px 20px;
-      background: #333;
-      color: white;
+    }
+    .cover h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 46px;
+      letter-spacing: 4px;
+      color: #d4af37;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+    .card {
+      background: linear-gradient(145deg, #15241c, #0b120e);
+      border-radius: 22px;
+      padding: 45px;
+      margin-bottom: 50px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      border: 1px solid rgba(212,175,55,0.25);
+    }
+    h3 {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      letter-spacing: 1px;
+    }
+    .name {
+      font-size: 28px;
+      margin: 15px 0;
+    }
+    .arabic {
+      font-size: 24px;
+      direction: rtl;
+      text-align: right;
+      line-height: 2;
+      color: #f3e6b3;
+      margin: 25px 0;
+    }
+    footer {
+      background: #060a08;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(212,175,55,0.3);
+      color: #d4af37;
     }
   </style>
 </head>
 <body>
 
-<!-- ===== COVER ===== -->
-<header>
+<!-- AUDIO -->
+<audio id="bgm" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3b5fbd0c55.mp3" preload="auto"></audio>
+
+<!-- OPENING SCREEN -->
+<div class="opening" id="opening">
   <div>
-    <p>Undangan Pernikahan</p>
-    <h1>Sri Puspita Sari & Uli Supian</h1>
-    <p>Sabtu, 20 Juni 2020</p>
-    <a href="#mempelai" class="btn">Buka Undangan</a>
+    <h1>Undangan Khitan</h1>
+    <p>Ahmad Fauzan</p>
+    <button class="btn-open" onclick="openInvitation()">BUKA UNDANGAN</button>
   </div>
-</header>
+</div>
 
-<!-- ===== AYAT ===== -->
+<!-- MAIN CONTENT -->
+<div class="cover">
+  <h2>Undangan Khitan</h2>
+</div>
+
 <section>
-  <h2>Assalamu’alaikum</h2>
-  <p class="ayat">
-    “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri,
-    supaya kamu mendapatkan ketenangan, dan Dia menjadikan di antaramu rasa kasih dan sayang.”<br/>
-    <strong>(QS. Ar-Rum: 21)</strong>
-  </p>
-</section>
+  <div class="card">
+    <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
+    <p>
+      Dengan memohon rahmat dan ridho Allah SWT, kami mengundang
+      Bapak/Ibu/Saudara/i untuk menghadiri acara khitan putra kami:
+    </p>
+    <div class="name">Ananda Ahmad Fauzan</div>
+    <p>Putra dari Bapak Budi Santoso & Ibu Siti Aminah</p>
+  </div>
 
-<!-- ===== MEMPELAI ===== -->
-<section id="mempelai">
-  <h2>Mempelai</h2>
-  <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
-  <div class="couple">
-    <div class="card">
-      <h3>Uli Supian</h3>
-      <p>Putra dari<br/>Bapak Ahmad<br/>dan Ijah</p>
-    </div>
-    <div class="card">
-      <h3>Sri Puspita Sari</h3>
-      <p>Putri dari<br/>Bapak Muslim<br/>dan Ibu Nihaya</p>
+  <div class="card">
+    <h3>Waktu & Tempat</h3>
+    <p>Minggu, 20 Juli 2026<br>09.00 WIB – Selesai</p>
+    <p>Jl. Melati No. 10, Sukamaju</p>
+    <a href="https://maps.google.com/?q=Jl.+Melati+No.+10+Sukamaju" target="_blank" style="display:inline-block;margin-top:20px;padding:14px 36px;border-radius:40px;border:1px solid #d4af37;color:#d4af37;text-decoration:none;letter-spacing:2px;transition:0.3s;">
+      LIHAT LOKASI
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Doa Khitan</h3>
+    <div class="arabic">
+      اللّهُمَّ طَهِّرْ قَلْبَهُ وَاشْرَحْ صَدْرَهُ وَنَوِّرْ قَلْبَهُ بِالإِيْمَانِ وَاحْفَظْهُ مِنْ كُلِّ سُوْءٍ
+
+      "Yang artinya"
     </div>
   </div>
-</section>
-
-<!-- ===== ACARA ===== -->
-<section id="acara">
-  <h2>Acara Pernikahan</h2>
-  <div class="event">
-    <p><strong>Akad Nikah</strong></p>
-    <p>Sabtu, 20 Juni 2020</p>
-    <p>Pukul 08.00 WIB</p>
-    <br/>
-    <p><strong>Resepsi</strong></p>
-    <p>Sabtu, 20 Juni 2026</p>
-    <p>Pukul 11.00 – 14.00 WIB</p>
-    <br/>
-    <p>Hutan Blantara<br/>Jakarta</p>
-  </div>
-</section>
-
-<!-- ===== COUNTDOWN ===== -->
-<section>
-  <h2>Menuju Hari Bahagia</h2>
-  <div class="countdown" id="countdown"></div>
-</section>
-
-<!-- ===== LOKASI ===== -->
-<section id="lokasi">
-  <h2>Lokasi Acara</h2>
-  <iframe src="https://www.google.com/maps?q=jakarta&output=embed"></iframe>
-</section>
-
-<!-- ===== AMPL0P DIGITAL ===== -->
-<section id="amplop">
-  <h2>Amplop Digital</h2>
-  <p>Bagi Bapak/Ibu/Saudara/i yang berkenan memberikan tanda kasih, dapat melalui:</p>
-
-  <div class="couple">
-    <div class="card">
-      <h3>Transfer Bank</h3>
-      <p><strong>Bank BCA</strong></p>
-      <p>No. Rekening:<br/><strong>1234567890</strong></p>
-      <p>a.n. Uli Supian</p>
-    </div>
-
-    <div class="card">
-      <h3>QRIS</h3>
-      <p>Scan QR Code di bawah ini</p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ContohQRIS" alt="QR Code" style="margin-top:15px;border-radius:12px;" />
-    </div>
-  </div>
-</section>
-
-<!-- ===== RSVP ===== -->
-<section id="rsvp">
-  <h2>Konfirmasi Kehadiran</h2>
-  <form>
-    <input type="text" placeholder="Nama Lengkap" required />
-    <select required>
-      <option value="">Konfirmasi Kehadiran</option>
-      <option>Hadir</option>
-      <option>Tidak Hadir</option>
-    </select>
-    <textarea rows="4" placeholder="Ucapan & Doa"></textarea>
-    <button type="submit">Kirim</button>
-  </form>
-</section>
-
-<!-- ===== PENUTUP ===== -->
-<section>
-  <h2>Penutup</h2>
-  <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
-  <p><em>Wassalamu’alaikum Warahmatullahi Wabarakatuh</em></p>
 </section>
 
 <footer>
-  <p>© 2026 <br/>Dibuat Oleh-Ade Rohim</p>
+  Hormat Kami<br>Keluarga Besar Budi Santoso
 </footer>
 
 <script>
-  // Countdown
-  const weddingDate = new Date("2026-06-20T08:00:00").getTime();
-  const countdownEl = document.getElementById("countdown");
-
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = weddingDate - now;
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    countdownEl.innerHTML = `
-      <div class="time"><span>${days}</span>Hari</div>
-      <div class="time"><span>${hours}</span>Jam</div>
-      <div class="time"><span>${minutes}</span>Menit</div>
-      <div class="time"><span>${seconds}</span>Detik</div>
-    `;
-  }, 1000);
+  function openInvitation() {
+    document.getElementById('opening').classList.add('hide');
+    const music = document.getElementById('bgm');
+    music.volume = 0.6;
+    music.play();
+  }
 </script>
 
 </body>
-  </html>
-  
+</html>
